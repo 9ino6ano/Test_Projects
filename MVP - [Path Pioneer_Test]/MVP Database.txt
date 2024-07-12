@@ -1,0 +1,55 @@
+CREATE DATABASE quiz_questions;
+
+use quiz_questions;
+
+CREATE TABLE IF NOT EXISTS quiz_questions (
+    `question_id` INT AUTO_INCREMENT,
+    `question_text` TEXT NOT NULL,
+    `option_a` VARCHAR(255) NOT NULL,
+    `option_b` VARCHAR(255) NOT NULL,
+    `option_c` VARCHAR(255) NOT NULL,
+    `option_d` VARCHAR(255) NOT NULL,
+    `correct_option` CHAR(1) NOT NULL,
+     'Expert_Level' VARCHAR(255) NOT NULL,
+     PRIMARY KEY (`question_id`)
+);
+
+desc quiz_questions;
+
+INSERT INTO quiz_questions (question_text, option_a, option_b, option_c, option_d, correct_option, Expert_Level)
+VALUES
+('What is the purpose of BGP (Border Gateway Protocol) in routing?', 'To manage internal routing within a network', 'To connect devices within the same local area network', 'To exchange routing and reachability information between autonomous systems', 'To provide security at the network layer','C','Beginner');
+
+INSERT INTO quiz_questions (question_text, option_a, option_b, option_c, option_d, correct_option,Expert_Level)
+VALUES
+('What does the acronym LAN stand for in networking?', 'Local Area Network', 'Large Area Network', 'Longitudinal Access Network', 'Limited Access Node', 'A','B');
+
+INSERT INTO quiz_questions (question_text, option_a, option_b, option_c, option_d, correct_option, Expert_Level)
+VALUES
+('Which protocol is commonly used for email communication in networking?', 'HTTP', 'FTP', 'SMTP', 'UDP', 'C', 'Beginner');
+
+INSERT INTO quiz_questions (question_text, option_a, option_b, option_c, option_d, correct_option, Expert_Level)
+VALUES
+('What does DNS stand for in networking?', 'Dynamic Network Service', 'Digital Network Security', 'Data Naming System', 'Domain Name System', 'D','Beginner');
+
+INSERT INTO quiz_questions (question_text , option_a, option_b , option_c, option_d, correct_option, Expert_Level)
+VALUES
+('In the OSI model, which layer is responsible for logical addressing, such as IP addresses?', 'Network-Layer', 'Transport-Layer', 'Data-Link-Layer', 'Application-Layer', 'A', 'Beginner');
+
+INSERT INTO quiz_questions (question_text , option_a, option_b, option_c, option_d, correct_option, Expert_Level)
+VALUES
+('What device is used to connect multiple computers in a local network and operates at the Data Link Layer?', 'Router', 'Modem', 'Switch', 'Hub', 'C', 'Beginner');
+
+INSERT INTO quiz_questions (question_text, option_a, option_b, option_c, option_d, correct_option, Expert_Level)
+VALUES
+('What is the purpose of the OSI model in networking?', 'To define the structure of the internet', 'To standardize network protocols and communication ', 'To specify hardware components of a network', 'To provide framework for cybersecurity','B','Beginner');
+
+INSERT INTO quiz_questions (question_text, option_a, option_b, option_c, option_d, correct_option, Expert_Level)
+VALUES
+('What is the purpose of Quality of Service (QoS) in networking?', 'To improve the speed of data transmission','To prioritize certain types of network traffic over others', 'To enhance network security', 'To prevent network congestion','A','Beginner');
+
+INSERT INTO quiz_questions (question_text, option_a, option_b, option_c, option_d, correct_option, Expert_Level)
+VALUES
+('What is VLAN (Virtual Local Area Network?', 'A physical network separated into different segments', 'A logical network created within a physical network', 'A type of network cable', 'A security protocol for wireless networks','A','Beginner');
+
+select * from quiz_questions;
